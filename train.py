@@ -17,7 +17,7 @@ def my_cross_val(method, X, y, k):
             #(this way, if it doesn't divide evenly, each fold has about the same number of data points)
                 Xtest.append(X[j])
                 ytest.append(y[j])
-        method.fit(Xtrain, ytrain)    # fits the training data into the given model
+        method.fit(np.array(Xtrain), np.array(ytrain))    # fits the training data into the given model
         #The next for loop goes through each data point in the validation set Xtest
         #and dividing it by how many times it could've occurred (errRate)
         for h in range(len(Xtest)): 
@@ -50,7 +50,7 @@ def my_train_test(method, X, y, pi, k):
             else:     #adds the data points that aren't
                 Xtest.append(X[j])
                 ytest.append(y[j])
-        method.fit(Xtrain, ytrain)    # fits the training data into the given model
+        method.fit(np.array(Xtrain), np.array(ytrain))    # fits the training data into the given model
         #The next for loop goes through each data point in the validation set Xtest
         #and dividing it by how many times it could've occurred (errRate)
         for h in range(len(Xtest)): 

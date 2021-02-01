@@ -70,3 +70,13 @@ def initial_adam(weights):
         sqr_veloc["dW" + str(l)] = np.zeros(weights["W" + l].shape)
         sqr_veloc["db" + str(l)] = np.zeros(weights["b" + l].shape)
     return velocity, sqr_veloc
+
+def initial_weights(initializer, layers_dims):
+    if initializer == "random":
+        return rand_initial(layers_dims)
+    elif initializer == "zero":       # not recommended if using hidden layers
+        return zero_initial(layers_dims)
+    elif initializer == "he":
+        return he_initial(layers_dims)
+    elif initializer == "xavier":
+        return xavier_initial(layers_dims)
