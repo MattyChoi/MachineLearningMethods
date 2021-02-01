@@ -3,7 +3,6 @@ from numpy import linalg as la
 import sklearn
 
 from sklearn.metrics import accuracy_score
-from sklearn.linear_model import LogisticRegression
 
 class MySVM2:
 
