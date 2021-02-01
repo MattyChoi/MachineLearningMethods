@@ -20,8 +20,7 @@ if __name__ == '__main__':
     # batch sizes
     m = [40, 200, bost.data.shape[0]]
 
-    methodlist = [MySVM2(d, m[0], iter), MySVM2(d, m[1], iter), MySVM2(d, m[2], iter),
-                LogisticRegression(penalty='l2', solver='lbfgs', multi_class='multinomial', max_iter=5000)]
+    methodlist = []
 
     datalist = []
     methodName = []
