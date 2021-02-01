@@ -13,7 +13,7 @@ from propogations import *
 
 # returns the optimal weights of the neural network
 # X = (number of featuers, number of examples), y = (1, number of examples)
-# the neural network is already set to have mini batch learning, insert X.shape[1] 
+# the neural network is already set to have mini batch learning, insert X.shape[1] for batch learning
 def nn_model_mini_batch(X, y, layers_dims, activations, optimizer, initializer = "random", beta = 0.9, beta2 = 0.999, 
 step_size = 0.01, mini_batch_size = 64, num_iterations = 5000, lambd = 0, print_cost = False):
     costs = []                # keep track of costs
